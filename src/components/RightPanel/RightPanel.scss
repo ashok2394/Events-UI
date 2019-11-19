@@ -1,0 +1,72 @@
+.event-url-container {
+    position: relative;
+    width: 77%;
+    display: flex;
+    max-height: 1175px;
+    overflow-y: auto;
+    left: 50px;
+    flex-direction: column;
+    .event-url {
+        color: red;
+        margin: 0;
+        padding: 5px;
+        margin-top: 20px;
+        border: 2px solid red;
+        border-radius: 10%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        width: fit-content;
+    }
+    .tabs-container {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+        .event-tab {
+            display: flex;
+            color: red;
+            margin: 0;
+            white-space: nowrap;
+            padding: 10px;
+            background: #fff;
+            border: 2px solid red;
+            min-width: 0;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 13px;
+            transition: ease-in;
+            transition-duration: 0.2s;
+            &.active {
+                color: white;
+                background: red;
+                .close-tab {
+                    color: white;
+                }
+            }
+            &:hover {
+                background: red;
+                color: white;
+                .close-tab {
+                    color: white;
+                }
+            }
+            &:focus {
+                outline: none;
+                flex-shrink: 0;
+            }
+            .close-tab {
+                font-size: 15px;
+                font-weight: 500;
+                color: red;
+                margin: 0;
+                padding: 0;
+                margin-left: 10px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
