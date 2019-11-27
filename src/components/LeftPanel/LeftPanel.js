@@ -1,7 +1,7 @@
 import React from 'react';
 import './LeftPanel.scss';
 
-function LeftPanel(props) {
+const LeftPanel = (props) => {
     const leftMarkup = props.eventsData.map((event, index) => {
         const buttonClass = props.currentEventIndex === index ? 'active' : '';
         return (

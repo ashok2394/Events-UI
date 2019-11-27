@@ -1,7 +1,7 @@
 import React from 'react';
 import './RightPanel.scss';
 
-function RightPanel(props) {
+const RightPanel = (props) => {
     const rightPaneMarkup = props.activeEventDetails.eventRightPaneList.map((eventUrl, index) => {
         return(
             <span className={`event-url ${index}`} key={`event-url-${index}`}>
@@ -18,7 +18,7 @@ function RightPanel(props) {
     )
 }
 
-function Tabs(props) {
+const Tabs = (props) => {
     const tabsContent = props.eventList.map(eventIndex => {
         const buttonClickEvent = props.eventList.length === 1 ? {pointerEvents: 'none'} : {};
         const activeTabClass = props.eventIndex === eventIndex ? 'active' : '';
